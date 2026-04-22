@@ -120,8 +120,8 @@ export const itinerary: ItineraryDay[] = [
     city: "Frankfurt",
     country: "Germany",
     events: [
-      { id: "e13", time: "09:00", title: "Depart — Eurostar to Frankfurt", location: "St Pancras International", type: "Transit", address: "Euston Rd, London N1C 4QP", notes: "Check in 30 mins before" },
-      { id: "e14", time: "13:40", title: "Arrive Frankfurt Hbf", location: "Frankfurt (Main) Hauptbahnhof", type: "Transit", address: "Am Hauptbahnhof, 60329 Frankfurt am Main" },
+      { id: "e13", time: "11:15", title: "Flight to Frankfurt", location: "London Heathrow — Terminal 5", type: "Transit", address: "Heathrow Airport Terminal 5, Longford, Hounslow TW6 2GA", notes: "Terminal 5 — arrive by 09:15 for check-in" },
+      { id: "e14", time: "13:55", title: "Arrive Frankfurt (FRA)", location: "Frankfurt Airport — Terminal 2", type: "Transit", address: "Frankfurt Airport, 60547 Frankfurt am Main" },
       { id: "e15", time: "15:00", title: "Check in — The Pure", location: "Niddastraße 86, Frankfurt", type: "Check-in", address: "Niddastraße 86, 60329 Frankfurt am Main" },
       { id: "e_c3", time: "16:30", title: "Coffee at Café Metropol", location: "Weckmarkt 13, Frankfurt", type: "Food", address: "Weckmarkt 13, 60311 Frankfurt am Main" },
       { id: "e16", time: "19:00", title: "Museumsufer Walk", location: "Museumsufer, Sachsenhausen", type: "Sights" },
@@ -235,15 +235,15 @@ export const seedExpenses: Expense[] = [
 export const initialAlerts: Alert[] = [
   {
     id: "alert1",
-    type: "warning",
-    title: "Eurostar Advisory",
-    message: "Minor delays possible on Eurostar Apr 30 due to scheduled maintenance. Allow extra check-in time.",
+    type: "info",
+    title: "Upcoming: Flight to Frankfurt",
+    message: "Departs Heathrow T5 at 11:15 on Apr 30. Arrive at the airport by 09:15 for check-in.",
     date: "2026-04-28",
     dismissed: false,
   },
   {
     id: "alert2",
-    type: "info",
+    type: "warning",
     title: "May Day — Frankfurt",
     message: "May 1st is a public holiday in Germany. Most shops closed; Kleinmarkthalle open limited hours.",
     date: "2026-04-29",
@@ -252,9 +252,9 @@ export const initialAlerts: Alert[] = [
   {
     id: "alert3",
     type: "info",
-    title: "Upcoming: Eurostar Departure",
-    message: "Eurostar to Frankfurt departs in 2 days from St Pancras International at 09:00.",
-    date: "2026-04-28",
+    title: "Frankfurt arrival — Terminal 2",
+    message: "Landing at FRA Terminal 2 at 13:55. Taxi or S-Bahn into the city takes ~15–25 mins.",
+    date: "2026-04-29",
     dismissed: false,
   },
 ];

@@ -5,6 +5,14 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Version
 
 ---
 
+## [0.3.1] — 2026-04-22
+
+### Fixed
+- Apr 30 transit corrected to flight from **Heathrow Terminal 5** at **11:15**, arriving **Frankfurt FRA Terminal 2** at **13:55** (was incorrectly set as Eurostar from St Pancras at 09:00 / 13:40)
+- Alerts updated to reflect flight details and airport arrival tip; removed stale Eurostar references
+
+---
+
 ## [0.3.0] — 2026-04-22
 
 ### Added
