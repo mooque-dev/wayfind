@@ -2,7 +2,7 @@
 
 import { ItineraryEvent } from "@/types";
 import { getEventColor, getEventDot, getMapsUrl } from "@/utils";
-import { MapPinIcon, ExternalLinkIcon, StickyNoteIcon } from "lucide-react";
+import { MapPinIcon, ExternalLinkIcon, StickyNoteIcon, TicketIcon } from "lucide-react";
 import clsx from "clsx";
 
 interface EventCardProps {
@@ -51,16 +51,31 @@ export default function EventCard({ event, isLast }: EventCardProps) {
             </div>
           )}
 
-          {event.address && (
-            <a
-              href={getMapsUrl(event.address)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 mt-3 text-accent hover:text-accent-subtle transition-colors"
-            >
-              <span className="text-[11px] font-medium">Open in Maps</span>
-              <ExternalLinkIcon size={11} />
-            </a>
+          {(event.address || event.bookingUrl) && (
+            <div className="flex items-center gap-3 mt-3 flex-wrap">
+              {event.address && (
+                <a
+                  href={getMapsUrl(event.address)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-accent hover:text-accent-subtle transition-colors"
+                >
+                  <span className="text-[11px] font-medium">Open in Maps</span>
+                  <ExternalLinkIcon size={11} />
+                </a>
+              )}
+              {event.bookingUrl && (
+                <a
+                  href={event.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-accent/10 border border-accent/25 text-accent hover:bg-accent/15 transition-colors px-2.5 py-1 rounded-lg"
+                >
+                  <TicketIcon size={11} />
+                  <span className="text-[11px] font-semibold">{event.bookingLabel ?? "Book"}</span>
+                </a>
+              )}
+            </div>
           )}
         </div>
       </div>

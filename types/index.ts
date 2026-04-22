@@ -33,6 +33,8 @@ export interface ItineraryEvent {
   type: EventType;
   address?: string;
   notes?: string;
+  bookingUrl?: string;
+  bookingLabel?: string;
 }
 
 export interface ItineraryDay {

@@ -76,9 +76,9 @@ export const itinerary: ItineraryDay[] = [
     events: [
       { id: "e_r1", time: "07:30", title: "Morning run", location: "Golders Hill Park, NW11", type: "Activity" },
       { id: "e_c1", time: "09:00", title: "Flat white at Ginger & White", location: "Hampstead, NW3", type: "Food", address: "4a-5a Perrin's Court, London NW3 1QS" },
-      { id: "e3", time: "11:00", title: "The Design Museum", location: "Kensington High St", type: "Museum", address: "224-238 Kensington High St, London W8 6AG" },
+      { id: "e3", time: "11:00", title: "The Design Museum", location: "Kensington High St", type: "Museum", address: "224-238 Kensington High St, London W8 6AG", bookingUrl: "https://designmuseum.org/visit", bookingLabel: "Buy Tickets" },
       { id: "e4", time: "14:00", title: "Labour and Wait", location: "Redchurch St, Shoreditch", type: "Shopping", address: "85 Redchurch St, London E2 7DJ" },
-      { id: "e5", time: "20:00", title: "Jazz Cafe", location: "Camden", type: "Music", address: "5 Parkway, London NW1 7PG" },
+      { id: "e5", time: "20:00", title: "Jazz Cafe", location: "Camden", type: "Music", address: "5 Parkway, London NW1 7PG", bookingUrl: "https://www.thejazzcafelondon.com", bookingLabel: "Buy Tickets" },
     ],
   },
   {
@@ -87,11 +87,11 @@ export const itinerary: ItineraryDay[] = [
     country: "UK",
     events: [
       { id: "e_r2", time: "07:30", title: "Morning run", location: "Regent's Park, NW1", type: "Activity" },
-      { id: "e6", time: "10:00", title: "Barbican Conservatory", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS" },
-      { id: "e7", time: "13:00", title: "Lunch at St. John", location: "Clerkenwell", type: "Food", address: "26 St John St, London EC1M 4AY" },
+      { id: "e6", time: "10:00", title: "Barbican Conservatory", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS", bookingUrl: "https://www.barbican.org.uk/whats-on/conservatory", bookingLabel: "Check Opening" },
+      { id: "e7", time: "13:00", title: "Lunch at St. John", location: "Clerkenwell", type: "Food", address: "26 St John St, London EC1M 4AY", bookingUrl: "https://stjohnrestaurant.com/reservations", bookingLabel: "Reserve Table" },
       { id: "e_rd1", time: "15:30", title: "Reading hour", location: "Barbican Library, EC2", type: "Free", address: "Silk St, London EC2Y 8DS" },
       { id: "e_s1", time: "18:30", title: "Evening with Brendan", location: "Soho, W1", type: "Social", notes: "Drinks & dinner — confirm spot with Brendan" },
-      { id: "e8", time: "21:00", title: "Ronnie Scott's", location: "Soho, W1", type: "Music", address: "47 Frith St, London W1D 4HT", notes: "Brendan joining" },
+      { id: "e8", time: "21:00", title: "Ronnie Scott's", location: "Soho, W1", type: "Music", address: "47 Frith St, London W1D 4HT", notes: "Brendan joining", bookingUrl: "https://www.ronniescotts.co.uk/performances", bookingLabel: "Buy Tickets" },
     ],
   },
   {
@@ -101,7 +101,7 @@ export const itinerary: ItineraryDay[] = [
     events: [
       { id: "e9", time: "10:00", title: "Explore Notting Hill", location: "Portobello Road, W11", type: "Sights" },
       { id: "e_c2", time: "11:30", title: "Coffee at Books for Cooks", location: "Notting Hill, W11", type: "Food", address: "4 Blenheim Crescent, London W11 1NN" },
-      { id: "e_m1", time: "14:00", title: "Tate Modern", location: "Bankside, SE1", type: "Museum", address: "Bankside, London SE1 9TG" },
+      { id: "e_m1", time: "14:00", title: "Tate Modern", location: "Bankside, SE1", type: "Museum", address: "Bankside, London SE1 9TG", bookingUrl: "https://www.tate.org.uk/visit/tate-modern", bookingLabel: "Free — Plan Visit" },
       { id: "e10", time: "17:00", title: "Free afternoon", location: "Central London", type: "Free" },
     ],
   },
@@ -135,9 +135,9 @@ export const itinerary: ItineraryDay[] = [
       { id: "e_r3", time: "07:00", title: "Morning run along the Main", location: "Sachsenhausen riverbank", type: "Activity" },
       { id: "e_c4", time: "09:00", title: "Coffee at Café Laumer", location: "Bockenheim, Frankfurt", type: "Food", address: "Bockenheimer Landstraße 67, 60325 Frankfurt" },
       { id: "e17", time: "10:30", title: "Manufactum Warenhaus", location: "Bockenheimer Anlage", type: "Shopping", address: "Bockenheimer Anlage 49-50, 60322 Frankfurt" },
-      { id: "e_m2", time: "12:00", title: "Städel Museum", location: "Schaumainkai 63, Sachsenhausen", type: "Museum", address: "Schaumainkai 63, 60596 Frankfurt am Main", notes: "May Day — confirm opening hours" },
+      { id: "e_m2", time: "12:00", title: "Städel Museum", location: "Schaumainkai 63, Sachsenhausen", type: "Museum", address: "Schaumainkai 63, 60596 Frankfurt am Main", notes: "May Day — confirm opening hours", bookingUrl: "https://www.staedelmuseum.de/en/visit", bookingLabel: "Buy Tickets" },
       { id: "e18", time: "14:30", title: "Kleinmarkthalle", location: "Hasengasse 5-7", type: "Food", address: "Hasengasse 5-7, 60311 Frankfurt am Main" },
-      { id: "e19", time: "22:00", title: "Jazzkeller", location: "Kleine Bockenheimer Str.", type: "Music", address: "Kleine Bockenheimer Str. 18a, 60313 Frankfurt" },
+      { id: "e19", time: "22:00", title: "Jazzkeller", location: "Kleine Bockenheimer Str.", type: "Music", address: "Kleine Bockenheimer Str. 18a, 60313 Frankfurt", bookingUrl: "https://www.jazzkeller.com", bookingLabel: "Buy Tickets" },
     ],
   },
   {
@@ -171,7 +171,7 @@ export const itinerary: ItineraryDay[] = [
     events: [
       { id: "e_rd3", time: "09:00", title: "Morning reading", location: "25hours Hotel Bikini — rooftop", type: "Free", notes: "Good spot with Tiergarten view" },
       { id: "e27", time: "14:00", title: "Voo Store", location: "Oranienstraße 24, Kreuzberg", type: "Shopping", address: "Oranienstraße 24, 10999 Berlin" },
-      { id: "e28", time: "21:30", title: "A-Trane Jazz Club", location: "Bleibtreustraße 1, Charlottenburg", type: "Music", address: "Bleibtreustraße 1, 10623 Berlin" },
+      { id: "e28", time: "21:30", title: "A-Trane Jazz Club", location: "Bleibtreustraße 1, Charlottenburg", type: "Music", address: "Bleibtreustraße 1, 10623 Berlin", bookingUrl: "https://www.a-trane.de", bookingLabel: "Buy Tickets" },
     ],
   },
   {
@@ -194,8 +194,8 @@ export const itinerary: ItineraryDay[] = [
       { id: "e_r5", time: "07:00", title: "Morning run", location: "Frederiksberg Canal, Copenhagen", type: "Activity" },
       { id: "e33", time: "10:00", title: "TorvehallerneKBH", location: "Frederiksborggade 21", type: "Food", address: "Frederiksborggade 21, 1362 København" },
       { id: "e34", time: "13:00", title: "HAY House", location: "Østergade 61", type: "Shopping", address: "Østergade 61, 2, 1100 København" },
-      { id: "e_m3", time: "15:30", title: "Designmuseum Danmark", location: "Bredgade 68, København", type: "Museum", address: "Bredgade 68, 1260 København" },
-      { id: "e35", time: "21:00", title: "Jazzhus Montmartre", location: "Store Regnegade 19A", type: "Music", address: "Store Regnegade 19A, 1110 København" },
+      { id: "e_m3", time: "15:30", title: "Designmuseum Danmark", location: "Bredgade 68, København", type: "Museum", address: "Bredgade 68, 1260 København", bookingUrl: "https://designmuseum.dk/en/visit", bookingLabel: "Buy Tickets" },
+      { id: "e35", time: "21:00", title: "Jazzhus Montmartre", location: "Store Regnegade 19A", type: "Music", address: "Store Regnegade 19A, 1110 København", bookingUrl: "https://jazzhusmontmartre.dk", bookingLabel: "Buy Tickets" },
     ],
   },
   {
@@ -206,7 +206,7 @@ export const itinerary: ItineraryDay[] = [
       { id: "e_rd4", time: "08:30", title: "Morning reading & coffee", location: "Coco Hotel, Vesterbro", type: "Free" },
       { id: "e36", time: "11:00", title: "Studio Arhoj", location: "Skindergade 7", type: "Shopping", address: "Skindergade 7, st, 1159 København" },
       { id: "e37", time: "14:00", title: "Nørrebro Wander", location: "Nørrebro, Copenhagen", type: "Sights" },
-      { id: "e38", time: "22:00", title: "La Fontaine", location: "Kompagnistræde 11", type: "Music", address: "Kompagnistræde 11, 1208 København" },
+      { id: "e38", time: "22:00", title: "La Fontaine", location: "Kompagnistræde 11", type: "Music", address: "Kompagnistræde 11, 1208 København", bookingUrl: "https://lafontaine.dk", bookingLabel: "Buy Tickets" },
     ],
   },
   {

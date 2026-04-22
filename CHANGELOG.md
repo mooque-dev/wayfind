@@ -5,6 +5,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Version
 
 ---
 
+## [0.3.2] — 2026-04-22
+
+### Added
+- `bookingUrl` and `bookingLabel` fields on `ItineraryEvent`
+- Booking/ticket button on event cards — amber pill with ticket icon, opens venue website
+- Links added to 11 events requiring tickets or reservations:
+  - **London:** Design Museum (tickets), Jazz Cafe (tickets), Barbican Conservatory (check opening), St. John (reserve table), Ronnie Scott's (tickets), Tate Modern (free — plan visit)
+  - **Frankfurt:** Städel Museum (tickets), Jazzkeller (tickets)
+  - **Berlin:** A-Trane (tickets)
+  - **Copenhagen:** Jazzhus Montmartre (tickets), La Fontaine (tickets), Designmuseum Danmark (tickets)
+
+---
+
 ## [0.3.1] — 2026-04-22
 
 ### Fixed
