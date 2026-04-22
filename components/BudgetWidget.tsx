@@ -21,21 +21,21 @@ export default function BudgetWidget() {
       {/* Header */}
       <div className="flex items-baseline justify-between mb-4">
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted">
             Trip Budget
           </p>
           <p className="text-[28px] font-bold text-white leading-tight mt-0.5">
             {formatCurrency(spent)}
           </p>
-          <p className="text-[12px] text-neutral-500 mt-0.5">
+          <p className="text-[12px] text-fg-muted mt-0.5">
             of {formatCurrency(totalBudget)} total
           </p>
         </div>
         <div className="text-right">
-          <p className={clsx("text-[20px] font-bold", remaining >= 0 ? "text-green-400" : "text-red-400")}>
+          <p className={clsx("text-[20px] font-bold", remaining >= 0 ? "text-success" : "text-danger")}>
             {formatCurrency(Math.abs(remaining))}
           </p>
-          <p className="text-[11px] text-neutral-500">{remaining >= 0 ? "remaining" : "over budget"}</p>
+          <p className="text-[11px] text-fg-muted">{remaining >= 0 ? "remaining" : "over budget"}</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ export default function BudgetWidget() {
         <div
           className={clsx(
             "h-full rounded-full transition-all duration-700",
-            pct > 90 ? "bg-red-400" : pct > 70 ? "bg-amber-400" : "bg-green-400"
+            pct > 90 ? "bg-danger" : pct > 70 ? "bg-accent" : "bg-success"
           )}
           style={{ width: `${pct}%` }}
         />
@@ -63,9 +63,9 @@ export default function BudgetWidget() {
                 <div className="flex items-center justify-between mb-1">
                   <div className="flex items-center gap-2">
                     <span className="text-[14px]">{getCategoryIcon(cat)}</span>
-                    <span className="text-[12px] font-medium text-neutral-300">{cat}</span>
+                    <span className="text-[12px] font-medium text-fg-secondary">{cat}</span>
                   </div>
-                  <span className="text-[12px] font-semibold text-neutral-200">
+                  <span className="text-[12px] font-semibold text-fg-secondary">
                     {formatCurrency(byCategory[cat])}
                   </span>
                 </div>

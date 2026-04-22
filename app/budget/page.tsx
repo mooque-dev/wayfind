@@ -28,19 +28,19 @@ export default function BudgetPage() {
       {/* Header */}
       <div className="px-4 pt-12 pb-4 flex items-start justify-between">
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-400">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
             Wayfind
           </p>
           <h1 className="text-[26px] font-bold text-white leading-tight mt-0.5">
             Budget
           </h1>
-          <p className="text-[13px] text-neutral-500 mt-0.5">
+          <p className="text-[13px] text-fg-muted mt-0.5">
             Track your trip spending
           </p>
         </div>
         <button
           onClick={() => setShowModal(true)}
-          className="flex items-center gap-2 bg-amber-400 text-black px-4 py-2.5 rounded-xl font-bold text-[13px] hover:bg-amber-300 transition-colors mt-8"
+          className="flex items-center gap-2 bg-accent text-black px-4 py-2.5 rounded-xl font-bold text-[13px] hover:bg-accent-subtle transition-colors mt-8"
         >
           <PlusIcon size={16} />
           Add
@@ -55,7 +55,7 @@ export default function BudgetPage() {
       {/* Budget limit editor */}
       <div className="mx-4 mb-4 bg-white/[0.04] border border-white/8 rounded-2xl px-4 py-3 flex items-center justify-between">
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted">
             Total Budget Limit
           </p>
           {editingBudget ? (
@@ -64,12 +64,12 @@ export default function BudgetPage() {
                 type="number"
                 value={budgetInput}
                 onChange={(e) => setBudgetInput(e.target.value)}
-                className="bg-white/10 border border-amber-400/50 rounded-lg px-2 py-1 text-white text-[16px] font-bold w-28 focus:outline-none"
+                className="bg-white/10 border border-accent/50 rounded-lg px-2 py-1 text-white text-[16px] font-bold w-28 focus:outline-none"
                 autoFocus
               />
               <button
                 onClick={handleBudgetSave}
-                className="text-amber-400 text-[12px] font-semibold hover:text-amber-300"
+                className="text-accent text-[12px] font-semibold hover:text-accent-subtle"
               >
                 Save
               </button>
@@ -83,7 +83,7 @@ export default function BudgetPage() {
         {!editingBudget && (
           <button
             onClick={() => { setEditingBudget(true); setBudgetInput(String(totalBudget)); }}
-            className="text-amber-400 text-[12px] font-semibold hover:text-amber-300 transition-colors"
+            className="text-accent text-[12px] font-semibold hover:text-accent-subtle transition-colors"
           >
             Edit
           </button>
@@ -92,7 +92,7 @@ export default function BudgetPage() {
 
       {/* Expense list */}
       <div className="px-4 pb-4">
-        <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500 mb-3">
+        <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-3">
           Expenses ({sorted.length})
         </p>
         <div className="space-y-2">
@@ -112,7 +112,7 @@ export default function BudgetPage() {
                   <p className="text-[13px] font-semibold text-white truncate">
                     {exp.description || exp.category}
                   </p>
-                  <p className="text-[11px] text-neutral-500">
+                  <p className="text-[11px] text-fg-muted">
                     {format(parseISO(exp.date), "MMM d")} · {exp.city}
                   </p>
                 </div>
@@ -123,7 +123,7 @@ export default function BudgetPage() {
                 </p>
                 <button
                   onClick={() => removeExpense(exp.id)}
-                  className="text-neutral-600 hover:text-red-400 transition-colors"
+                  className="text-fg-faint hover:text-danger transition-colors"
                 >
                   <Trash2Icon size={14} />
                 </button>

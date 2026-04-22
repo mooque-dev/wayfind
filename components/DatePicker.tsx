@@ -42,8 +42,8 @@ export default function DatePicker() {
             className={clsx(
               "flex-shrink-0 flex flex-col items-center gap-1 w-14 py-2.5 rounded-xl border transition-all duration-200",
               isActive
-                ? "bg-amber-400 border-amber-400 text-black"
-                : "bg-white/5 border-white/8 text-neutral-400 hover:border-white/20 hover:text-neutral-200"
+                ? "bg-accent border-accent text-black"
+                : "bg-white/5 border-white/8 text-fg-tertiary hover:border-white/20 hover:text-fg-secondary"
             )}
           >
             <span className="text-[10px] font-semibold uppercase tracking-widest">
@@ -56,7 +56,7 @@ export default function DatePicker() {
               {day?.city.slice(0, 3) ?? ""}
             </span>
             {isToday && !isActive && (
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             )}
           </button>
         );

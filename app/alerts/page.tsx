@@ -17,8 +17,8 @@ const styleMap = {
   warning: {
     border: "border-amber-500/20",
     bg: "bg-amber-500/[0.06]",
-    icon: "text-amber-400",
-    badge: "bg-amber-400/15 text-amber-400",
+    icon: "text-warning",
+    badge: "bg-warning/15 text-warning",
     title: "text-amber-100",
     msg: "text-amber-200/60",
   },
@@ -57,13 +57,13 @@ export default function AlertsPage() {
     <div className="min-h-screen">
       {/* Header */}
       <div className="px-4 pt-12 pb-6">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-400">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
           Wayfind
         </p>
         <h1 className="text-[26px] font-bold text-white leading-tight mt-0.5">
           Alerts
         </h1>
-        <p className="text-[13px] text-neutral-500 mt-0.5">
+        <p className="text-[13px] text-fg-muted mt-0.5">
           {active.length} active · {dismissed.length} dismissed
         </p>
       </div>
@@ -71,13 +71,13 @@ export default function AlertsPage() {
       {/* Active alerts */}
       {active.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-16 px-4 text-center">
-          <BellOffIcon size={40} className="text-neutral-700 mb-4" />
-          <p className="text-[15px] font-semibold text-neutral-400">All clear</p>
-          <p className="text-[12px] text-neutral-600 mt-1">No active alerts for your trip</p>
+          <BellOffIcon size={40} className="text-fg-ghost mb-4" />
+          <p className="text-[15px] font-semibold text-fg-tertiary">All clear</p>
+          <p className="text-[12px] text-fg-faint mt-1">No active alerts for your trip</p>
         </div>
       ) : (
         <div className="px-4 space-y-3 mb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500 mb-2">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-2">
             Active
           </p>
           {active.map((alert) => (
@@ -89,7 +89,7 @@ export default function AlertsPage() {
       {/* Dismissed */}
       {dismissed.length > 0 && (
         <div className="px-4 space-y-3 pb-6">
-          <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500 mb-2">
+          <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-2">
             Dismissed
           </p>
           {dismissed.map((alert) => (
@@ -129,7 +129,7 @@ function AlertCard({
             <span className={clsx("text-[10px] font-bold uppercase px-2 py-0.5 rounded-full tracking-wider", s.badge)}>
               {alert.type}
             </span>
-            <span className="text-[11px] text-neutral-600">
+            <span className="text-[11px] text-fg-faint">
               {format(parseISO(alert.date), "MMM d")}
             </span>
           </div>
@@ -143,7 +143,7 @@ function AlertCard({
         {!isDismissed && (
           <button
             onClick={() => onDismiss(alert.id)}
-            className="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0"
+            className="text-fg-faint hover:text-fg-secondary transition-colors shrink-0"
           >
             <XIcon size={16} />
           </button>

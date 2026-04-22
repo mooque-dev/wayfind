@@ -23,8 +23,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[#0a0a0a] flex justify-center min-h-svh">
-        <div className="relative w-full max-w-[430px] min-h-svh bg-[#0a0a0a]">
+      <body className="bg-base flex justify-center min-h-svh">
+        <div className="relative w-full max-w-[430px] min-h-svh bg-base">
           <main className="pb-20">{children}</main>
           <BottomNav />
         </div>

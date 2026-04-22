@@ -27,7 +27,7 @@ export default function EventCard({ event, isLast }: EventCardProps) {
         <div className="bg-white/[0.04] border border-white/8 rounded-2xl p-4 hover:border-white/15 transition-colors duration-200">
           <div className="flex items-start justify-between gap-2 mb-2">
             <div className="flex-1 min-w-0">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-neutral-500 mb-1">
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-1">
                 {event.time}
               </p>
               <h3 className="text-[15px] font-semibold text-white leading-tight">
@@ -39,13 +39,13 @@ export default function EventCard({ event, isLast }: EventCardProps) {
             </span>
           </div>
 
-          <div className="flex items-center gap-1.5 text-neutral-400">
+          <div className="flex items-center gap-1.5 text-fg-tertiary">
             <MapPinIcon size={12} className="shrink-0" />
             <span className="text-[12px] truncate">{event.location}</span>
           </div>
 
           {event.notes && (
-            <div className="flex items-start gap-1.5 mt-2 text-neutral-500">
+            <div className="flex items-start gap-1.5 mt-2 text-fg-muted">
               <StickyNoteIcon size={12} className="shrink-0 mt-0.5" />
               <span className="text-[11px] leading-snug">{event.notes}</span>
             </div>
@@ -56,7 +56,7 @@ export default function EventCard({ event, isLast }: EventCardProps) {
               href={getMapsUrl(event.address)}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 mt-3 text-amber-400 hover:text-amber-300 transition-colors"
+              className="inline-flex items-center gap-1.5 mt-3 text-accent hover:text-accent-subtle transition-colors"
             >
               <span className="text-[11px] font-medium">Open in Maps</span>
               <ExternalLinkIcon size={11} />

@@ -14,9 +14,9 @@ export default function AlertBanner() {
   const styles = {
     warning: {
       bg: "bg-amber-500/10 border-amber-500/30",
-      icon: "text-amber-400",
+      icon: "text-warning",
       text: "text-amber-100",
-      sub: "text-amber-300/70",
+      sub: "text-warning/70",
     },
     info: {
       bg: "bg-blue-500/10 border-blue-500/30",
@@ -57,14 +57,14 @@ export default function AlertBanner() {
           {top.message}
         </p>
         {alerts.length > 1 && (
-          <p className="text-[11px] text-neutral-500 mt-1">
+          <p className="text-[11px] text-fg-muted mt-1">
             +{alerts.length - 1} more alert{alerts.length > 2 ? "s" : ""}
           </p>
         )}
       </div>
       <button
         onClick={() => dismissAlert(top.id)}
-        className="text-neutral-500 hover:text-neutral-300 transition-colors shrink-0 mt-0.5"
+        className="text-fg-muted hover:text-fg-secondary transition-colors shrink-0 mt-0.5"
       >
         <XIcon size={14} />
       </button>
