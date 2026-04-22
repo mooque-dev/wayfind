@@ -15,6 +15,8 @@ export function getEventColor(type: EventType): string {
     Shopping: "text-pink-400 bg-pink-400/10 border-pink-400/20",
     Museum: "text-orange-400 bg-orange-400/10 border-orange-400/20",
     Accommodation: "text-green-400 bg-green-400/10 border-green-400/20",
+    Activity: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+    Social: "text-rose-400 bg-rose-400/10 border-rose-400/20",
     Free: "text-neutral-400 bg-neutral-400/10 border-neutral-400/20",
   };
   return map[type] || "text-neutral-400 bg-neutral-400/10 border-neutral-400/20";
@@ -30,6 +32,8 @@ export function getEventDot(type: EventType): string {
     Shopping: "bg-pink-400",
     Museum: "bg-orange-400",
     Accommodation: "bg-green-400",
+    Activity: "bg-emerald-400",
+    Social: "bg-rose-400",
     Free: "bg-neutral-500",
   };
   return map[type] || "bg-neutral-500";

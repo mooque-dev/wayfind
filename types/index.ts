@@ -7,6 +7,8 @@ export type EventType =
   | "Shopping"
   | "Museum"
   | "Accommodation"
+  | "Activity"
+  | "Social"
   | "Free";
 
 export interface Location {

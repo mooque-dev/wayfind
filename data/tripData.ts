@@ -74,6 +74,8 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
+      { id: "e_r1", time: "07:30", title: "Morning run", location: "Golders Hill Park, NW11", type: "Activity" },
+      { id: "e_c1", time: "09:00", title: "Flat white at Ginger & White", location: "Hampstead, NW3", type: "Food", address: "4a-5a Perrin's Court, London NW3 1QS" },
       { id: "e3", time: "11:00", title: "The Design Museum", location: "Kensington High St", type: "Museum", address: "224-238 Kensington High St, London W8 6AG" },
       { id: "e4", time: "14:00", title: "Labour and Wait", location: "Redchurch St, Shoreditch", type: "Shopping", address: "85 Redchurch St, London E2 7DJ" },
       { id: "e5", time: "20:00", title: "Jazz Cafe", location: "Camden", type: "Music", address: "5 Parkway, London NW1 7PG" },
@@ -84,9 +86,12 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
+      { id: "e_r2", time: "07:30", title: "Morning run", location: "Regent's Park, NW1", type: "Activity" },
       { id: "e6", time: "10:00", title: "Barbican Conservatory", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS" },
       { id: "e7", time: "13:00", title: "Lunch at St. John", location: "Clerkenwell", type: "Food", address: "26 St John St, London EC1M 4AY" },
-      { id: "e8", time: "21:00", title: "Ronnie Scott's", location: "Soho, W1", type: "Music", address: "47 Frith St, London W1D 4HT" },
+      { id: "e_rd1", time: "15:30", title: "Reading hour", location: "Barbican Library, EC2", type: "Free", address: "Silk St, London EC2Y 8DS" },
+      { id: "e_s1", time: "18:30", title: "Evening with Brendan", location: "Soho, W1", type: "Social", notes: "Drinks & dinner — confirm spot with Brendan" },
+      { id: "e8", time: "21:00", title: "Ronnie Scott's", location: "Soho, W1", type: "Music", address: "47 Frith St, London W1D 4HT", notes: "Brendan joining" },
     ],
   },
   {
@@ -94,8 +99,10 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
-      { id: "e9", time: "Morning", title: "Explore Notting Hill", location: "Portobello Road, W11", type: "Sights" },
-      { id: "e10", time: "Afternoon", title: "Free Afternoon", location: "Central London", type: "Free" },
+      { id: "e9", time: "10:00", title: "Explore Notting Hill", location: "Portobello Road, W11", type: "Sights" },
+      { id: "e_c2", time: "11:30", title: "Coffee at Books for Cooks", location: "Notting Hill, W11", type: "Food", address: "4 Blenheim Crescent, London W11 1NN" },
+      { id: "e_m1", time: "14:00", title: "Tate Modern", location: "Bankside, SE1", type: "Museum", address: "Bankside, London SE1 9TG" },
+      { id: "e10", time: "17:00", title: "Free afternoon", location: "Central London", type: "Free" },
     ],
   },
   {
@@ -103,7 +110,8 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
-      { id: "e11", time: "Morning", title: "Pack & prep for travel", location: "Aunt's House", type: "Free" },
+      { id: "e_rd2", time: "08:30", title: "Morning reading & coffee", location: "Aunt's House", type: "Free" },
+      { id: "e11", time: "11:00", title: "Pack & prep for travel", location: "Aunt's House", type: "Free" },
       { id: "e12", time: "Evening", title: "Farewell dinner", location: "London", type: "Food" },
     ],
   },
@@ -115,7 +123,8 @@ export const itinerary: ItineraryDay[] = [
       { id: "e13", time: "09:00", title: "Depart — Eurostar to Frankfurt", location: "St Pancras International", type: "Transit", address: "Euston Rd, London N1C 4QP", notes: "Check in 30 mins before" },
       { id: "e14", time: "13:40", title: "Arrive Frankfurt Hbf", location: "Frankfurt (Main) Hauptbahnhof", type: "Transit", address: "Am Hauptbahnhof, 60329 Frankfurt am Main" },
       { id: "e15", time: "15:00", title: "Check in — The Pure", location: "Niddastraße 86, Frankfurt", type: "Check-in", address: "Niddastraße 86, 60329 Frankfurt am Main" },
-      { id: "e16", time: "Evening", title: "Museumsufer Walk", location: "Museumsufer, Sachsenhausen", type: "Sights" },
+      { id: "e_c3", time: "16:30", title: "Coffee at Café Metropol", location: "Weckmarkt 13, Frankfurt", type: "Food", address: "Weckmarkt 13, 60311 Frankfurt am Main" },
+      { id: "e16", time: "19:00", title: "Museumsufer Walk", location: "Museumsufer, Sachsenhausen", type: "Sights" },
     ],
   },
   {
@@ -123,8 +132,11 @@ export const itinerary: ItineraryDay[] = [
     city: "Frankfurt",
     country: "Germany",
     events: [
-      { id: "e17", time: "10:00", title: "Manufactum Warenhaus", location: "Bockenheimer Anlage", type: "Shopping", address: "Bockenheimer Anlage 49-50, 60322 Frankfurt" },
-      { id: "e18", time: "Lunch", title: "Kleinmarkthalle", location: "Hasengasse 5-7", type: "Food", address: "Hasengasse 5-7, 60311 Frankfurt am Main" },
+      { id: "e_r3", time: "07:00", title: "Morning run along the Main", location: "Sachsenhausen riverbank", type: "Activity" },
+      { id: "e_c4", time: "09:00", title: "Coffee at Café Laumer", location: "Bockenheim, Frankfurt", type: "Food", address: "Bockenheimer Landstraße 67, 60325 Frankfurt" },
+      { id: "e17", time: "10:30", title: "Manufactum Warenhaus", location: "Bockenheimer Anlage", type: "Shopping", address: "Bockenheimer Anlage 49-50, 60322 Frankfurt" },
+      { id: "e_m2", time: "12:00", title: "Städel Museum", location: "Schaumainkai 63, Sachsenhausen", type: "Museum", address: "Schaumainkai 63, 60596 Frankfurt am Main", notes: "May Day — confirm opening hours" },
+      { id: "e18", time: "14:30", title: "Kleinmarkthalle", location: "Hasengasse 5-7", type: "Food", address: "Hasengasse 5-7, 60311 Frankfurt am Main" },
       { id: "e19", time: "22:00", title: "Jazzkeller", location: "Kleine Bockenheimer Str.", type: "Music", address: "Kleine Bockenheimer Str. 18a, 60313 Frankfurt" },
     ],
   },
@@ -136,7 +148,8 @@ export const itinerary: ItineraryDay[] = [
       { id: "e20", time: "08:30", title: "ICE Train to Berlin", location: "Frankfurt (Main) Hauptbahnhof", type: "Transit", address: "Am Hauptbahnhof, 60329 Frankfurt am Main", notes: "~2h journey" },
       { id: "e21", time: "11:00", title: "Arrive Berlin Hbf", location: "Berlin Hauptbahnhof", type: "Transit", address: "Europaplatz 1, 10557 Berlin" },
       { id: "e22", time: "12:00", title: "Check in — 25hours Hotel Bikini", location: "Budapester Str. 40, Berlin", type: "Check-in", address: "Budapester Str. 40, 10787 Berlin" },
-      { id: "e23", time: "Afternoon", title: "Explore Mitte", location: "Berlin Mitte", type: "Sights" },
+      { id: "e_c5", time: "13:30", title: "Coffee at The Barn", location: "Auguststraße 58, Mitte", type: "Food", address: "Auguststraße 58, 10119 Berlin" },
+      { id: "e23", time: "15:00", title: "Explore Mitte", location: "Berlin Mitte", type: "Sights" },
     ],
   },
   {
@@ -144,9 +157,11 @@ export const itinerary: ItineraryDay[] = [
     city: "Berlin",
     country: "Germany",
     events: [
-      { id: "e24", time: "10:00", title: "do you read me?!", location: "Auguststraße 28, Mitte", type: "Shopping", address: "Auguststraße 28, 10117 Berlin" },
-      { id: "e25", time: "12:00", title: "Markthalle Neun", location: "Kreuzberg", type: "Food", address: "Eisenbahnstraße 42/43, 10997 Berlin" },
-      { id: "e26", time: "Afternoon", title: "Tempelhofer Feld", location: "Tempelhof", type: "Sights", address: "Tempelhofer Damm, 12101 Berlin" },
+      { id: "e_r4", time: "07:00", title: "Morning run", location: "Tiergarten, Berlin", type: "Activity" },
+      { id: "e_c6", time: "09:00", title: "Coffee at Five Elephant", location: "Kreuzberg", type: "Food", address: "Reichenberger Str. 101, 10999 Berlin" },
+      { id: "e24", time: "10:30", title: "do you read me?!", location: "Auguststraße 28, Mitte", type: "Shopping", address: "Auguststraße 28, 10117 Berlin" },
+      { id: "e25", time: "12:30", title: "Markthalle Neun", location: "Kreuzberg", type: "Food", address: "Eisenbahnstraße 42/43, 10997 Berlin" },
+      { id: "e26", time: "15:00", title: "Tempelhofer Feld", location: "Tempelhof", type: "Sights", address: "Tempelhofer Damm, 12101 Berlin" },
     ],
   },
   {
@@ -154,7 +169,8 @@ export const itinerary: ItineraryDay[] = [
     city: "Berlin",
     country: "Germany",
     events: [
-      { id: "e27", time: "Afternoon", title: "Voo Store", location: "Oranienstraße 24, Kreuzberg", type: "Shopping", address: "Oranienstraße 24, 10999 Berlin" },
+      { id: "e_rd3", time: "09:00", title: "Morning reading", location: "25hours Hotel Bikini — rooftop", type: "Free", notes: "Good spot with Tiergarten view" },
+      { id: "e27", time: "14:00", title: "Voo Store", location: "Oranienstraße 24, Kreuzberg", type: "Shopping", address: "Oranienstraße 24, 10999 Berlin" },
       { id: "e28", time: "21:30", title: "A-Trane Jazz Club", location: "Bleibtreustraße 1, Charlottenburg", type: "Music", address: "Bleibtreustraße 1, 10623 Berlin" },
     ],
   },
@@ -166,7 +182,8 @@ export const itinerary: ItineraryDay[] = [
       { id: "e29", time: "08:00", title: "Flight to Copenhagen", location: "Berlin Brandenburg Airport (BER)", type: "Transit", notes: "~1h 20min flight" },
       { id: "e30", time: "10:30", title: "Arrive Copenhagen CPH", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup" },
       { id: "e31", time: "12:00", title: "Check in — Coco Hotel", location: "Vesterbrogade 41", type: "Check-in", address: "Vesterbrogade 41, 1620 København" },
-      { id: "e32", time: "Afternoon", title: "Explore Vesterbro", location: "Vesterbro, Copenhagen", type: "Sights" },
+      { id: "e_c7", time: "13:30", title: "Coffee at The Coffee Collective", location: "Nørreport, København", type: "Food", address: "Jægersborggade 10, 2200 København" },
+      { id: "e32", time: "15:00", title: "Explore Vesterbro", location: "Vesterbro, Copenhagen", type: "Sights" },
     ],
   },
   {
@@ -174,8 +191,10 @@ export const itinerary: ItineraryDay[] = [
     city: "Copenhagen",
     country: "Denmark",
     events: [
+      { id: "e_r5", time: "07:00", title: "Morning run", location: "Frederiksberg Canal, Copenhagen", type: "Activity" },
       { id: "e33", time: "10:00", title: "TorvehallerneKBH", location: "Frederiksborggade 21", type: "Food", address: "Frederiksborggade 21, 1362 København" },
       { id: "e34", time: "13:00", title: "HAY House", location: "Østergade 61", type: "Shopping", address: "Østergade 61, 2, 1100 København" },
+      { id: "e_m3", time: "15:30", title: "Designmuseum Danmark", location: "Bredgade 68, København", type: "Museum", address: "Bredgade 68, 1260 København" },
       { id: "e35", time: "21:00", title: "Jazzhus Montmartre", location: "Store Regnegade 19A", type: "Music", address: "Store Regnegade 19A, 1110 København" },
     ],
   },
@@ -184,8 +203,9 @@ export const itinerary: ItineraryDay[] = [
     city: "Copenhagen",
     country: "Denmark",
     events: [
+      { id: "e_rd4", time: "08:30", title: "Morning reading & coffee", location: "Coco Hotel, Vesterbro", type: "Free" },
       { id: "e36", time: "11:00", title: "Studio Arhoj", location: "Skindergade 7", type: "Shopping", address: "Skindergade 7, st, 1159 København" },
-      { id: "e37", time: "Afternoon", title: "Nørrebro Wander", location: "Nørrebro, Copenhagen", type: "Sights" },
+      { id: "e37", time: "14:00", title: "Nørrebro Wander", location: "Nørrebro, Copenhagen", type: "Sights" },
       { id: "e38", time: "22:00", title: "La Fontaine", location: "Kompagnistræde 11", type: "Music", address: "Kompagnistræde 11, 1208 København" },
     ],
   },

@@ -5,6 +5,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Version
 
 ---
 
+## [0.3.0] — 2026-04-22
+
+### Added
+- **5 morning runs** — Golders Hill Park (London), Regent's Park (London), along the Main river (Frankfurt), Tiergarten (Berlin), Frederiksberg Canal (Copenhagen)
+- **7 café stops** — Ginger & White (Hampstead), Books for Cooks (Notting Hill), Café Metropol & Café Laumer (Frankfurt), The Barn (Berlin), Five Elephant (Berlin), The Coffee Collective (Copenhagen)
+- **4 reading sessions** — Barbican Library (London), Aunt's House (London), 25hours Hotel rooftop (Berlin), Coco Hotel (Copenhagen)
+- **3 museum visits** — Tate Modern (London), Städel Museum (Frankfurt), Designmuseum Danmark (Copenhagen)
+- **Monday evening with Brendan** — Apr 27, 18:30, Soho, W1 (Social event type); note added to Ronnie Scott's that Brendan is joining
+- New `"Activity"` event type (emerald) for morning runs
+- New `"Social"` event type (rose) for social meetups
+
+### Changed
+- All 14 days now have fuller, more realistic schedules
+- Events within each day reordered chronologically
+
+---
+
 ## [0.2.0] — 2026-04-22
 
 ### Added
