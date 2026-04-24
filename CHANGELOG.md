@@ -5,6 +5,25 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Version
 
 ---
 
+## [0.5.0] — 2026-04-23
+
+### Added
+- **PDF document links** on transit event cards — tap to open boarding pass or receipt directly in the app
+  - FlixTrain boarding pass (Frankfurt → Berlin, May 1)
+  - Norwegian travel doc (Berlin → Copenhagen, May 3, booking YRQTRV)
+  - Norwegian receipt (Copenhagen → Amsterdam, May 6, order #1122-757-553)
+- `docUrl` / `docLabel` fields on `ItineraryEvent` type
+- Document button (grey pill with file icon) on event cards alongside existing booking/Maps links
+
+### Fixed
+- **May 1 transit**: corrected from ICE at 13:30 from Hauptbahnhof → **FlixTrain FLX10 at 09:58** from Frankfurt (Main) Süd, arriving Berlin Südkreuz 13:53 · Wagon 5, Seats 13C+13D
+- **May 3 Berlin→Copenhagen flight**: corrected from 11:00 → **Norwegian D83305 at 22:40** from BER Terminal 1, arriving CPH Terminal 3 at 23:40
+- **May 3 schedule**: now a full Berlin day (Prenzlauer Berg explore, lunch in Mitte, checkout) followed by late-night departure
+- **May 4 Copenhagen**: check-in moved to 00:30 (late arrival); added late check-in note for Coco Hotel
+- **May 6 Amsterdam flight**: updated with Norwegian D83540 flight number and order reference
+
+---
+
 ## [0.4.0] — 2026-04-23
 
 ### Added

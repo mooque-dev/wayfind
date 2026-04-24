@@ -2,7 +2,7 @@
 
 import { ItineraryEvent } from "@/types";
 import { getEventColor, getEventDot, getMapsUrl } from "@/utils";
-import { MapPinIcon, ExternalLinkIcon, StickyNoteIcon, TicketIcon } from "lucide-react";
+import { MapPinIcon, ExternalLinkIcon, StickyNoteIcon, TicketIcon, FileTextIcon } from "lucide-react";
 import clsx from "clsx";
 
 interface EventCardProps {
@@ -51,7 +51,7 @@ export default function EventCard({ event, isLast }: EventCardProps) {
             </div>
           )}
 
-          {(event.address || event.bookingUrl) && (
+          {(event.address || event.bookingUrl || event.docUrl) && (
             <div className="flex items-center gap-3 mt-3 flex-wrap">
               {event.address && (
                 <a
@@ -73,6 +73,17 @@ export default function EventCard({ event, isLast }: EventCardProps) {
                 >
                   <TicketIcon size={11} />
                   <span className="text-[11px] font-semibold">{event.bookingLabel ?? "Book"}</span>
+                </a>
+              )}
+              {event.docUrl && (
+                <a
+                  href={event.docUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-white/8 border border-white/12 text-fg-secondary hover:text-white hover:border-white/20 transition-colors px-2.5 py-1 rounded-lg"
+                >
+                  <FileTextIcon size={11} />
+                  <span className="text-[11px] font-semibold">{event.docLabel ?? "Document"}</span>
                 </a>
               )}
             </div>

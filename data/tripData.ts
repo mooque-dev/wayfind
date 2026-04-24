@@ -144,20 +144,18 @@ export const itinerary: ItineraryDay[] = [
       { id: "e16", time: "19:00", title: "Museumsufer Walk", location: "Museumsufer, Sachsenhausen", type: "Sights" },
     ],
   },
-  // May 1: Frankfurt morning → ICE to Berlin
+  // May 1: Frankfurt → FlixTrain → Berlin
   {
     date: "2026-05-01",
     city: "Frankfurt",
     country: "Germany",
     events: [
       { id: "e_r3", time: "07:00", title: "Morning run along the Main", location: "Sachsenhausen riverbank", type: "Activity" },
-      { id: "e_c4", time: "09:00", title: "Coffee at Café Laumer", location: "Bockenheim, Frankfurt", type: "Food", address: "Bockenheimer Landstraße 67, 60325 Frankfurt" },
-      { id: "e17", time: "10:30", title: "Manufactum Warenhaus", location: "Bockenheimer Anlage", type: "Shopping", address: "Bockenheimer Anlage 49-50, 60322 Frankfurt" },
-      { id: "e18", time: "12:00", title: "Quick lunch — Kleinmarkthalle", location: "Hasengasse 5-7", type: "Food", address: "Hasengasse 5-7, 60311 Frankfurt am Main", notes: "May Day — confirm opening hours" },
-      { id: "e20", time: "13:30", title: "ICE Train to Berlin", location: "Frankfurt (Main) Hauptbahnhof", type: "Transit", address: "Am Hauptbahnhof, 60329 Frankfurt am Main", notes: "~4h journey" },
-      { id: "e21", time: "17:30", title: "Arrive Berlin Hbf", location: "Berlin Hauptbahnhof", type: "Transit", address: "Europaplatz 1, 10557 Berlin" },
-      { id: "e22", time: "18:30", title: "Check in — 25hours Hotel Bikini", location: "Budapester Str. 40, Berlin", type: "Check-in", address: "Budapester Str. 40, 10787 Berlin" },
-      { id: "e_c5", time: "19:30", title: "Coffee at The Barn", location: "Auguststraße 58, Mitte", type: "Food", address: "Auguststraße 58, 10119 Berlin" },
+      { id: "e_pack1", time: "08:15", title: "Breakfast & check out — The Pure", location: "Niddastraße 86, Frankfurt", type: "Free" },
+      { id: "e20", time: "09:58", title: "FlixTrain FLX10 to Berlin", location: "Frankfurt (Main) Süd", type: "Transit", address: "Hedderichstrasse 51, 60594 Frankfurt am Main", notes: "Wagon 5 · Seats 13C + 13D · Booking #334 854 1256 · Arrive 15 min early", docUrl: "/docs/Boarding-Pass-Frankfurt-Berlin-3348541256.pdf", docLabel: "Boarding Pass" },
+      { id: "e21", time: "13:53", title: "Arrive Berlin Südkreuz", location: "Berlin Südkreuz (FlixTrain)", type: "Transit", address: "General-Pape-Straße 1, 12101 Berlin" },
+      { id: "e22", time: "15:00", title: "Check in — 25hours Hotel Bikini", location: "Budapester Str. 40, Berlin", type: "Check-in", address: "Budapester Str. 40, 10787 Berlin" },
+      { id: "e_c5", time: "16:30", title: "Coffee at The Barn", location: "Auguststraße 58, Mitte", type: "Food", address: "Auguststraße 58, 10119 Berlin" },
     ],
   },
   // May 2: Berlin full day
@@ -175,30 +173,33 @@ export const itinerary: ItineraryDay[] = [
       { id: "e28", time: "21:30", title: "A-Trane Jazz Club", location: "Bleibtreustraße 1, Charlottenburg", type: "Music", address: "Bleibtreustraße 1, 10623 Berlin", bookingUrl: "https://www.a-trane.de", bookingLabel: "Buy Tickets" },
     ],
   },
-  // May 3: Berlin → Copenhagen
+  // May 3: Berlin full day + late night flight to Copenhagen
   {
     date: "2026-05-03",
     city: "Berlin",
     country: "Germany",
     events: [
       { id: "e_rd3", time: "08:00", title: "Morning reading", location: "25hours Hotel Bikini — rooftop", type: "Free", notes: "Good spot with Tiergarten view" },
-      { id: "e29", time: "11:00", title: "Flight to Copenhagen", location: "Berlin Brandenburg Airport (BER)", type: "Transit", notes: "~1h 20min flight" },
-      { id: "e30", time: "12:30", title: "Arrive Copenhagen (CPH)", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup" },
-      { id: "e31", time: "13:30", title: "Check in — Coco Hotel", location: "Vesterbrogade 41", type: "Check-in", address: "Vesterbrogade 41, 1620 København" },
-      { id: "e_c7", time: "14:30", title: "Coffee at The Coffee Collective", location: "Nørreport, København", type: "Food", address: "Jægersborggade 10, 2200 København" },
-      { id: "e32", time: "16:00", title: "Explore Vesterbro", location: "Vesterbro, Copenhagen", type: "Sights" },
+      { id: "e_ber1", time: "10:00", title: "Explore Prenzlauer Berg", location: "Prenzlauer Berg, Berlin", type: "Sights" },
+      { id: "e_ber2", time: "13:00", title: "Lunch in Mitte", location: "Berlin Mitte", type: "Food" },
+      { id: "e_ber3", time: "16:00", title: "Check out — 25hours Hotel Bikini", location: "Budapester Str. 40, Berlin", type: "Free", address: "Budapester Str. 40, 10787 Berlin" },
+      { id: "e29", time: "20:30", title: "Head to Berlin Brandenburg Airport", location: "BER Terminal 1", type: "Transit", notes: "Allow ~45 min from city centre" },
+      { id: "e29b", time: "22:40", title: "Flight to Copenhagen (D83305)", location: "Berlin Brandenburg Airport — Terminal 1", type: "Transit", notes: "Norwegian · Seat 11F · Booking YRQTRV · 1h flight", docUrl: "/docs/Norwegian-BER-CPH-YRQTRV.pdf", docLabel: "Travel Doc" },
+      { id: "e30", time: "23:40", title: "Arrive Copenhagen (CPH)", location: "Copenhagen Airport — Terminal 3", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup" },
     ],
   },
-  // May 4: Copenhagen full day
+  // May 4: Copenhagen — late check-in then first full day
   {
     date: "2026-05-04",
     city: "Copenhagen",
     country: "Denmark",
     events: [
+      { id: "e31", time: "00:30", title: "Check in — Coco Hotel", location: "Vesterbrogade 41", type: "Check-in", address: "Vesterbrogade 41, 1620 København", notes: "Late arrival — confirm late check-in with hotel in advance" },
       { id: "e_r5", time: "07:00", title: "Morning run", location: "Frederiksberg Canal, Copenhagen", type: "Activity" },
-      { id: "e33", time: "10:00", title: "TorvehallerneKBH", location: "Frederiksborggade 21", type: "Food", address: "Frederiksborggade 21, 1362 København" },
-      { id: "e34", time: "13:00", title: "HAY House", location: "Østergade 61", type: "Shopping", address: "Østergade 61, 2, 1100 København" },
-      { id: "e_m3", time: "15:30", title: "Designmuseum Danmark", location: "Bredgade 68, København", type: "Museum", address: "Bredgade 68, 1260 København", bookingUrl: "https://designmuseum.dk/en/visit", bookingLabel: "Buy Tickets" },
+      { id: "e_c7", time: "09:00", title: "Coffee at The Coffee Collective", location: "Nørreport, København", type: "Food", address: "Jægersborggade 10, 2200 København" },
+      { id: "e33", time: "11:00", title: "TorvehallerneKBH", location: "Frederiksborggade 21", type: "Food", address: "Frederiksborggade 21, 1362 København" },
+      { id: "e34", time: "14:00", title: "HAY House", location: "Østergade 61", type: "Shopping", address: "Østergade 61, 2, 1100 København" },
+      { id: "e_m3", time: "16:00", title: "Designmuseum Danmark", location: "Bredgade 68, København", type: "Museum", address: "Bredgade 68, 1260 København", bookingUrl: "https://designmuseum.dk/en/visit", bookingLabel: "Buy Tickets" },
       { id: "e35", time: "21:00", title: "Jazzhus Montmartre", location: "Store Regnegade 19A", type: "Music", address: "Store Regnegade 19A, 1110 København", bookingUrl: "https://jazzhusmontmartre.dk", bookingLabel: "Buy Tickets" },
     ],
   },
@@ -221,7 +222,7 @@ export const itinerary: ItineraryDay[] = [
     country: "Denmark",
     events: [
       { id: "e_am1", time: "07:30", title: "Morning coffee & pack", location: "Coco Hotel, Vesterbro", type: "Free" },
-      { id: "e_am2", time: "13:00", title: "Flight to Amsterdam", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup", notes: "~2h flight to AMS" },
+      { id: "e_am2", time: "13:00", title: "Flight to Amsterdam (D83540)", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup", notes: "Norwegian Air · Order #1122-757-553 · ~2h flight · Hohyung joining", docUrl: "/docs/Receipt_1122-757-553.pdf", docLabel: "Receipt" },
       { id: "e_am3", time: "15:10", title: "Arrive Amsterdam Schiphol", location: "Amsterdam Airport Schiphol", type: "Transit", address: "Evert van de Beekstraat 202, 1118 CP Schiphol" },
       { id: "e_am4", time: "16:30", title: "Check in — The Hoxton Amsterdam", location: "Herengracht 255, Amsterdam", type: "Check-in", address: "Herengracht 255, 1016 BJ Amsterdam" },
       { id: "e_am5", time: "18:00", title: "Walk along the canals", location: "Jordaan & Herengracht", type: "Sights" },

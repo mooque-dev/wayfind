@@ -35,6 +35,8 @@ export interface ItineraryEvent {
   notes?: string;
   bookingUrl?: string;
   bookingLabel?: string;
+  docUrl?: string;
+  docLabel?: string;
 }
 
 export interface ItineraryDay {
