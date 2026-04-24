@@ -5,6 +5,19 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). Version
 
 ---
 
+## [0.4.0] — 2026-04-23
+
+### Added
+- **Amsterdam leg** — May 6–8 added to itinerary and map
+  - Fly Copenhagen → Amsterdam May 6 (~2h, arriving 15:10)
+  - Stay: The Hoxton Amsterdam (Herengracht 255)
+  - Highlights: Bimhuis jazz (tickets), Rijksmuseum (tickets), Frozen Fountain, Moooi Store, De Hallen, Vondelpark run
+  - Return flight May 8 from Schiphol → Toronto YYZ (Air Canada)
+- **Itinerary dates corrected** — Frankfurt Apr 30–May 1, Berlin May 1–3, Copenhagen May 3–6, Amsterdam May 6–8
+- 9 Amsterdam places added to Map screen
+
+---
+
 ## [0.3.2] — 2026-04-22
 
 ### Added
