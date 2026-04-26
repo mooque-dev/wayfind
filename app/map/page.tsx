@@ -4,8 +4,11 @@ import { useState } from "react";
 import { locations } from "@/data/tripData";
 import { getMapsUrl, getFlagEmoji } from "@/utils";
 import { Location, Place } from "@/types";
-import { MapPinIcon, ExternalLinkIcon, SearchIcon } from "lucide-react";
-import clsx from "clsx";
+import { MapPinIcon, ExternalLinkIcon } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const categoryColors: Record<string, string> = {
   Accommodation: "bg-green-400",
@@ -53,49 +56,41 @@ export default function MapPage() {
       </div>
 
       {/* City filter */}
-      <div
-        className="flex gap-2 overflow-x-auto px-4 pb-3 scrollbar-hide"
-        style={{ scrollbarWidth: "none" }}
-      >
+      <div className="flex gap-2 overflow-x-auto px-4 pb-3 scrollbar-hide">
         {["All", ...locations.map((l) => l.city)].map((city) => (
-          <button
+          <Button
             key={city}
             onClick={() => setActiveCity(city)}
-            className={clsx(
-              "shrink-0 px-4 py-2 rounded-full border text-[12px] font-semibold transition-all duration-200",
+            className={cn(
+              "shrink-0 h-auto px-4 py-2 rounded-full border text-[12px] font-semibold transition-all duration-200",
               activeCity === city
-                ? "bg-accent border-accent text-black"
-                : "bg-white/5 border-white/10 text-fg-tertiary hover:border-white/20"
+                ? "bg-accent border-accent text-black hover:bg-accent-subtle"
+                : "bg-white/5 border-white/10 text-fg-tertiary hover:border-white/20 hover:bg-white/8"
             )}
           >
             {city}
-          </button>
+          </Button>
         ))}
       </div>
 
       {/* Category filter */}
-      <div
-        className="flex gap-2 overflow-x-auto px-4 pb-4 scrollbar-hide"
-        style={{ scrollbarWidth: "none" }}
-      >
+      <div className="flex gap-2 overflow-x-auto px-4 pb-4 scrollbar-hide">
         {categoryFilters.map((cat) => (
-          <button
+          <Button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={clsx(
-              "shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[11px] font-semibold transition-all duration-200",
+            className={cn(
+              "shrink-0 h-auto flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-[11px] font-semibold transition-all duration-200",
               activeCategory === cat
-                ? "bg-white/15 border-white/30 text-white"
-                : "bg-white/[0.03] border-white/8 text-fg-muted hover:border-white/15"
+                ? "bg-white/15 border-white/30 text-white hover:bg-white/20"
+                : "bg-white/[0.03] border-white/8 text-fg-muted hover:border-white/15 hover:bg-white/5"
             )}
           >
             {cat !== "All" && (
-              <span
-                className={clsx("w-1.5 h-1.5 rounded-full", categoryColors[cat] ?? "bg-fg-muted")}
-              />
+              <span className={cn("w-1.5 h-1.5 rounded-full", categoryColors[cat] ?? "bg-fg-muted")} />
             )}
             {cat}
-          </button>
+          </Button>
         ))}
       </div>
 
@@ -150,22 +145,24 @@ function CitySection({ location }: { location: Location }) {
 function PlaceCard({ place }: { place: Place }) {
   const dot = categoryColors[place.category] ?? "bg-fg-muted";
   return (
-    <div className="bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 flex items-center justify-between gap-3 hover:border-white/15 transition-colors">
-      <div className="flex items-center gap-3 min-w-0">
-        <span className={clsx("w-2 h-2 rounded-full shrink-0", dot)} />
-        <div className="min-w-0">
-          <p className="text-[13px] font-semibold text-white truncate">{place.name}</p>
-          <p className="text-[11px] text-fg-muted truncate">{place.address}</p>
+    <Card className="bg-white/[0.04] border-white/8 ring-0 rounded-xl gap-0 py-0 hover:border-white/15 transition-colors">
+      <CardContent className="px-4 py-3 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <span className={cn("w-2 h-2 rounded-full shrink-0", dot)} />
+          <div className="min-w-0">
+            <p className="text-[13px] font-semibold text-white truncate">{place.name}</p>
+            <p className="text-[11px] text-fg-muted truncate">{place.address}</p>
+          </div>
         </div>
-      </div>
-      <a
-        href={getMapsUrl(place.address)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-accent hover:text-accent-subtle transition-colors shrink-0"
-      >
-        <MapPinIcon size={16} />
-      </a>
-    </div>
+        <a
+          href={getMapsUrl(place.address)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:text-accent-subtle transition-colors shrink-0"
+        >
+          <MapPinIcon size={16} />
+        </a>
+      </CardContent>
+    </Card>
   );
 }

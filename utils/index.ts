@@ -76,6 +76,7 @@ export function getFlagEmoji(country: string): string {
     UK: "🇬🇧",
     Germany: "🇩🇪",
     Denmark: "🇩🇰",
+    Netherlands: "🇳🇱",
   };
   return map[country] || "🌍";
 }

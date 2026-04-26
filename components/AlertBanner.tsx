@@ -1,8 +1,38 @@
 "use client";
 
 import { useTripStore } from "@/store/tripStore";
-import { XIcon, AlertTriangleIcon, InfoIcon } from "lucide-react";
-import clsx from "clsx";
+import { XIcon, AlertTriangleIcon, InfoIcon, CheckCircle2Icon, XCircleIcon } from "lucide-react";
+import { Alert, AlertTitle, AlertDescription, AlertAction } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const iconMap = {
+  warning: AlertTriangleIcon,
+  info: InfoIcon,
+  success: CheckCircle2Icon,
+  error: XCircleIcon,
+};
+
+const colorMap = {
+  warning: "border-amber-500/30 bg-amber-500/10 [&>svg]:text-warning",
+  info:    "border-blue-500/30  bg-blue-500/10  [&>svg]:text-blue-400",
+  success: "border-green-500/30 bg-green-500/10 [&>svg]:text-green-400",
+  error:   "border-red-500/30   bg-red-500/10   [&>svg]:text-red-400",
+};
+
+const titleColor = {
+  warning: "text-amber-100",
+  info:    "text-blue-100",
+  success: "text-green-100",
+  error:   "text-red-100",
+};
+
+const descColor = {
+  warning: "text-amber-200/60",
+  info:    "text-blue-200/60",
+  success: "text-green-200/60",
+  error:   "text-red-200/60",
+};
 
 export default function AlertBanner() {
   const { getActiveAlerts, dismissAlert } = useTripStore();
@@ -10,64 +40,32 @@ export default function AlertBanner() {
   if (alerts.length === 0) return null;
 
   const top = alerts[0];
-
-  const styles = {
-    warning: {
-      bg: "bg-amber-500/10 border-amber-500/30",
-      icon: "text-warning",
-      text: "text-amber-100",
-      sub: "text-warning/70",
-    },
-    info: {
-      bg: "bg-blue-500/10 border-blue-500/30",
-      icon: "text-blue-400",
-      text: "text-blue-100",
-      sub: "text-blue-300/70",
-    },
-    success: {
-      bg: "bg-green-500/10 border-green-500/30",
-      icon: "text-green-400",
-      text: "text-green-100",
-      sub: "text-green-300/70",
-    },
-    error: {
-      bg: "bg-red-500/10 border-red-500/30",
-      icon: "text-red-400",
-      text: "text-red-100",
-      sub: "text-red-300/70",
-    },
-  };
-
-  const s = styles[top.type];
+  const Icon = iconMap[top.type];
 
   return (
-    <div className={clsx("mx-4 mb-3 rounded-xl border px-4 py-3 flex items-start gap-3", s.bg)}>
-      <div className={clsx("mt-0.5 shrink-0", s.icon)}>
-        {top.type === "warning" ? (
-          <AlertTriangleIcon size={16} />
-        ) : (
-          <InfoIcon size={16} />
-        )}
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className={clsx("text-[13px] font-semibold leading-tight", s.text)}>
-          {top.title}
-        </p>
-        <p className={clsx("text-[12px] leading-snug mt-0.5", s.sub)}>
-          {top.message}
-        </p>
+    <Alert className={cn("mx-4 mb-3 rounded-xl px-4 py-3", colorMap[top.type])}>
+      <Icon size={16} />
+      <AlertTitle className={cn("text-[13px] font-semibold leading-tight", titleColor[top.type])}>
+        {top.title}
+      </AlertTitle>
+      <AlertDescription className={cn("text-[12px]", descColor[top.type])}>
+        {top.message}
         {alerts.length > 1 && (
-          <p className="text-[11px] text-fg-muted mt-1">
+          <span className="block text-fg-muted mt-1 text-[11px]">
             +{alerts.length - 1} more alert{alerts.length > 2 ? "s" : ""}
-          </p>
+          </span>
         )}
-      </div>
-      <button
-        onClick={() => dismissAlert(top.id)}
-        className="text-fg-muted hover:text-fg-secondary transition-colors shrink-0 mt-0.5"
-      >
-        <XIcon size={14} />
-      </button>
-    </div>
+      </AlertDescription>
+      <AlertAction>
+        <Button
+          variant="ghost"
+          size="icon-xs"
+          className="text-fg-muted hover:text-fg-secondary"
+          onClick={() => dismissAlert(top.id)}
+        >
+          <XIcon size={14} />
+        </Button>
+      </AlertAction>
+    </Alert>
   );
 }

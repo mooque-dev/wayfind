@@ -3,48 +3,47 @@
 import { useTripStore } from "@/store/tripStore";
 import { AlertTriangleIcon, InfoIcon, CheckCircle2Icon, XCircleIcon, BellOffIcon, XIcon } from "lucide-react";
 import { format, parseISO } from "date-fns";
-import clsx from "clsx";
-import { Alert } from "@/types";
+import { Alert as AlertType } from "@/types";
+import { Alert, AlertTitle, AlertDescription, AlertAction } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const iconMap = {
   warning: AlertTriangleIcon,
-  info: InfoIcon,
+  info:    InfoIcon,
   success: CheckCircle2Icon,
-  error: XCircleIcon,
+  error:   XCircleIcon,
 };
 
 const styleMap = {
   warning: {
-    border: "border-amber-500/20",
-    bg: "bg-amber-500/[0.06]",
-    icon: "text-warning",
-    badge: "bg-warning/15 text-warning",
+    card:  "border-amber-500/20 bg-amber-500/[0.06]",
+    icon:  "[&>svg]:text-warning",
+    badge: "bg-warning/15 text-warning border-transparent",
     title: "text-amber-100",
-    msg: "text-amber-200/60",
+    msg:   "text-amber-200/60",
   },
   info: {
-    border: "border-blue-500/20",
-    bg: "bg-blue-500/[0.06]",
-    icon: "text-blue-400",
-    badge: "bg-blue-400/15 text-blue-400",
+    card:  "border-blue-500/20 bg-blue-500/[0.06]",
+    icon:  "[&>svg]:text-blue-400",
+    badge: "bg-blue-400/15 text-blue-400 border-transparent",
     title: "text-blue-100",
-    msg: "text-blue-200/60",
+    msg:   "text-blue-200/60",
   },
   success: {
-    border: "border-green-500/20",
-    bg: "bg-green-500/[0.06]",
-    icon: "text-green-400",
-    badge: "bg-green-400/15 text-green-400",
+    card:  "border-green-500/20 bg-green-500/[0.06]",
+    icon:  "[&>svg]:text-green-400",
+    badge: "bg-green-400/15 text-green-400 border-transparent",
     title: "text-green-100",
-    msg: "text-green-200/60",
+    msg:   "text-green-200/60",
   },
   error: {
-    border: "border-red-500/20",
-    bg: "bg-red-500/[0.06]",
-    icon: "text-red-400",
-    badge: "bg-red-400/15 text-red-400",
+    card:  "border-red-500/20 bg-red-500/[0.06]",
+    icon:  "[&>svg]:text-red-400",
+    badge: "bg-red-400/15 text-red-400 border-transparent",
     title: "text-red-100",
-    msg: "text-red-200/60",
+    msg:   "text-red-200/60",
   },
 };
 
@@ -80,8 +79,8 @@ export default function AlertsPage() {
           <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-2">
             Active
           </p>
-          {active.map((alert) => (
-            <AlertCard key={alert.id} alert={alert} onDismiss={dismissAlert} />
+          {active.map((a) => (
+            <AlertCard key={a.id} alert={a} onDismiss={dismissAlert} />
           ))}
         </div>
       )}
@@ -92,8 +91,8 @@ export default function AlertsPage() {
           <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-muted mb-2">
             Dismissed
           </p>
-          {dismissed.map((alert) => (
-            <AlertCard key={alert.id} alert={alert} onDismiss={dismissAlert} isDismissed />
+          {dismissed.map((a) => (
+            <AlertCard key={a.id} alert={a} onDismiss={dismissAlert} isDismissed />
           ))}
         </div>
       )}
@@ -106,7 +105,7 @@ function AlertCard({
   onDismiss,
   isDismissed,
 }: {
-  alert: Alert;
+  alert: AlertType;
   onDismiss: (id: string) => void;
   isDismissed?: boolean;
 }) {
@@ -114,41 +113,41 @@ function AlertCard({
   const Icon = iconMap[alert.type];
 
   return (
-    <div
-      className={clsx(
-        "rounded-2xl border p-4 transition-opacity duration-300",
-        s.bg,
-        s.border,
+    <Alert
+      className={cn(
+        "rounded-2xl p-4 transition-opacity duration-300",
+        s.card,
+        s.icon,
         isDismissed && "opacity-40"
       )}
     >
-      <div className="flex items-start gap-3">
-        <Icon size={18} className={clsx("mt-0.5 shrink-0", s.icon)} />
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className={clsx("text-[10px] font-bold uppercase px-2 py-0.5 rounded-full tracking-wider", s.badge)}>
-              {alert.type}
-            </span>
-            <span className="text-[11px] text-fg-faint">
-              {format(parseISO(alert.date), "MMM d")}
-            </span>
-          </div>
-          <p className={clsx("text-[14px] font-semibold leading-tight", s.title)}>
-            {alert.title}
-          </p>
-          <p className={clsx("text-[12px] leading-snug mt-1", s.msg)}>
-            {alert.message}
-          </p>
+      <Icon size={18} />
+      <AlertTitle className={cn("text-[14px] font-semibold leading-tight", s.title)}>
+        <div className="flex items-center gap-2 mb-1">
+          <Badge className={cn("text-[10px] font-bold uppercase tracking-wider rounded-full h-auto px-2 py-0.5", s.badge)}>
+            {alert.type}
+          </Badge>
+          <span className="text-[11px] text-fg-faint font-normal">
+            {format(parseISO(alert.date), "MMM d")}
+          </span>
         </div>
-        {!isDismissed && (
-          <button
+        {alert.title}
+      </AlertTitle>
+      <AlertDescription className={cn("text-[12px] leading-snug mt-1", s.msg)}>
+        {alert.message}
+      </AlertDescription>
+      {!isDismissed && (
+        <AlertAction>
+          <Button
+            variant="ghost"
+            size="icon-xs"
             onClick={() => onDismiss(alert.id)}
-            className="text-fg-faint hover:text-fg-secondary transition-colors shrink-0"
+            className="text-fg-faint hover:text-fg-secondary"
           >
             <XIcon size={16} />
-          </button>
-        )}
-      </div>
-    </div>
+          </Button>
+        </AlertAction>
+      )}
+    </Alert>
   );
 }
