@@ -122,7 +122,6 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
-      { id: "e_r2", time: "07:30", title: "Morning run", location: "Regent's Park, NW1", type: "Activity" },
       { id: "e_apr27_1", time: "11:00", title: "Ozone Coffee", location: "Leonard St, Shoreditch EC2", type: "Food", address: "11 Leonard St, London EC2A 4AQ" },
       { id: "e6", time: "11:45", title: "Barbican Conservatory", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS", bookingUrl: "https://www.barbican.org.uk/whats-on/conservatory", bookingLabel: "Check Opening" },
       { id: "e_apr27_2", time: "13:15", title: "WeWork The Monument — drop bag", location: "Cheapside, EC2", type: "Free", address: "107 Cheapside, London EC2V 6DN" },
@@ -132,8 +131,7 @@ export const itinerary: ItineraryDay[] = [
       { id: "e_apr27_6", time: "15:40", title: "Borough Market", location: "Southwark, SE1", type: "Food", address: "8 Southwark St, London SE1 1TL" },
       { id: "e_apr27_7", time: "16:30", title: "WeWork The Monument — pick up bag", location: "Cheapside, EC2", type: "Free", address: "107 Cheapside, London EC2V 6DN" },
       { id: "e_apr27_8", time: "16:40", title: "Transit to Hoxton", location: "City → Hoxton, N1", type: "Transit", notes: "141 bus or Northern line → Old Street, then walk" },
-      { id: "e_apr27_9", time: "17:00", title: "The Red Lion", location: "Hoxton St, N1", type: "Social", address: "41 Hoxton St, London N1 6NH" },
-      { id: "e_s1", time: "18:30", title: "Evening with Brendan", location: "Soho, W1", type: "Social", notes: "Drinks & dinner — confirm spot with Brendan" },
+      { id: "e_s1", time: "17:00", title: "Evening with Brendan", location: "The Red Lion, Hoxton St N1", type: "Social", address: "41 Hoxton St, London N1 6NH", notes: "Drinks & dinner with Brendan" },
       { id: "e8", time: "21:00", title: "Ronnie Scott's", location: "Soho, W1", type: "Music", address: "47 Frith St, London W1D 4HT", notes: "Brendan joining", bookingUrl: "https://www.ronniescotts.co.uk/performances", bookingLabel: "Buy Tickets" },
     ],
   },
