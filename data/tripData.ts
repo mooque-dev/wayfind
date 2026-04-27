@@ -124,7 +124,6 @@ export const itinerary: ItineraryDay[] = [
     events: [
       { id: "e_apr27_1", time: "11:00", title: "Ozone Coffee", location: "Leonard St, Shoreditch EC2", type: "Food", address: "11 Leonard St, London EC2A 4AQ" },
       { id: "e_apr27_barb", time: "11:45", title: "Barbican Architecture Walk", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS", notes: "Lakeside terraces and Brutalist complex — conservatory closed til Friday" },
-      { id: "e_apr27_sky", time: "12:15", title: "Sky Garden", location: "20 Fenchurch St, EC3", type: "Sights", address: "20 Fenchurch St, London EC3M 3BY", notes: "Free — book ahead at skygarden.london" },
       { id: "e_apr27_guild", time: "12:45", title: "Guildhall Art Gallery", location: "Guildhall Yard, EC2", type: "Museum", address: "Guildhall Yard, London EC2V 5AE", notes: "Free — Roman amphitheatre underneath" },
       { id: "e_apr27_2", time: "13:15", title: "WeWork The Monument — drop bag", location: "Cheapside, EC2", type: "Free", address: "107 Cheapside, London EC2V 6DN" },
       { id: "e_apr27_3", time: "13:30", title: "Leadenhall Market", location: "City of London, EC3", type: "Sights", address: "Whittington Ave, London EC3V 1LR" },
