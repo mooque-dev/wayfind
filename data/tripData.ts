@@ -123,7 +123,6 @@ export const itinerary: ItineraryDay[] = [
     country: "UK",
     events: [
       { id: "e_apr27_1", time: "11:00", title: "Ozone Coffee", location: "Leonard St, Shoreditch EC2", type: "Food", address: "11 Leonard St, London EC2A 4AQ" },
-      { id: "e6", time: "11:45", title: "Barbican Conservatory", location: "Barbican, EC2", type: "Sights", address: "Silk St, London EC2Y 8DS", bookingUrl: "https://www.barbican.org.uk/whats-on/conservatory", bookingLabel: "Check Opening" },
       { id: "e_apr27_2", time: "13:15", title: "WeWork The Monument — drop bag", location: "Cheapside, EC2", type: "Free", address: "107 Cheapside, London EC2V 6DN" },
       { id: "e_apr27_3", time: "13:30", title: "Leadenhall Market", location: "City of London, EC3", type: "Sights", address: "Whittington Ave, London EC3V 1LR" },
       { id: "e_apr27_4", time: "13:50", title: "Reflection Garden", location: "City of London, EC4", type: "Sights" },
