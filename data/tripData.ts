@@ -141,12 +141,9 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
-      { id: "e_apr28_1", time: "11:00", title: "Abbey Road", location: "St John's Wood, NW8", type: "Sights", address: "3 Abbey Rd, London NW8 9AY" },
-      { id: "e_apr28_2", time: "12:00", title: "Outernet London", location: "Tottenham Court Rd, WC2", type: "Sights", address: "1 Charing Cross Rd, London WC2H 0DZ" },
-      { id: "e_apr28_3", time: "13:00", title: "Monmouth Coffee", location: "Seven Dials, Covent Garden WC2", type: "Food", address: "27 Monmouth St, London WC2H 9EU" },
-      { id: "e_apr28_4", time: "14:00", title: "Victoria and Albert Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 2RL" },
-      { id: "e_apr28_5", time: "16:30", title: "Natural History Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 5BD" },
-      { id: "e_apr28_6", time: "18:00", title: "Dinner — South Kensington", location: "South Kensington, SW7", type: "Food" },
+      { id: "e_apr28_5", time: "11:00", title: "Natural History Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 5BD" },
+      { id: "e_apr28_4", time: "13:30", title: "Victoria and Albert Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 2RL" },
+      { id: "e_apr28_6", time: "16:00", title: "Dinner — South Kensington", location: "South Kensington, SW7", type: "Food" },
     ],
   },
   {
