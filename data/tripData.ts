@@ -31,6 +31,8 @@ export const locations: Location[] = [
       { name: "Monmouth Coffee (Covent Garden)", address: "27 Monmouth St, London WC2H 9EU", category: "Food" },
       { name: "Victoria and Albert Museum", address: "Cromwell Rd, London SW7 2RL", category: "Museum" },
       { name: "Natural History Museum", address: "Cromwell Rd, London SW7 5BD", category: "Museum" },
+      { name: "Big Ben & Westminster", address: "Westminster Bridge Rd, London SW1A 0AA", category: "Sights" },
+      { name: "Monmouth Coffee (Borough)", address: "2 Park St, London SE1 9AB", category: "Food" },
     ],
   },
   {
@@ -143,7 +145,13 @@ export const itinerary: ItineraryDay[] = [
     events: [
       { id: "e_apr28_5", time: "11:00", title: "Natural History Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 5BD" },
       { id: "e_apr28_4", time: "13:30", title: "Victoria and Albert Museum", location: "South Kensington, SW7", type: "Museum", address: "Cromwell Rd, London SW7 2RL" },
-      { id: "e_apr28_6", time: "16:00", title: "Dinner — South Kensington", location: "South Kensington, SW7", type: "Food" },
+      { id: "e_apr28_7", time: "16:00", title: "Big Ben & Westminster", location: "Westminster, SW1", type: "Sights", address: "Westminster Bridge Rd, London SW1A 0AA" },
+      { id: "e_apr28_8", time: "16:30", title: "South Bank walk", location: "South Bank, SE1", type: "Activity", notes: "Westminster Bridge → Tate along the river" },
+      { id: "e_apr28_9", time: "17:15", title: "Borough Market", location: "Southwark, SE1", type: "Food", address: "8 Southwark St, London SE1 1TL" },
+      { id: "e_apr28_10", time: "17:30", title: "Monmouth Coffee", location: "Borough Market, SE1", type: "Food", address: "2 Park St, London SE1 9AB" },
+      { id: "e_apr28_11", time: "18:00", title: "Tate Modern", location: "Bankside, SE1", type: "Museum", address: "Bankside, London SE1 9TG", bookingUrl: "https://www.tate.org.uk/visit/tate-modern", bookingLabel: "Free — Plan Visit" },
+      { id: "e_apr28_12", time: "19:30", title: "Head home", location: "Bankside → NW11", type: "Transit" },
+      { id: "e_apr28_13", time: "20:30", title: "Orange Tree Restaurant", location: "London", type: "Food" },
     ],
   },
   {
