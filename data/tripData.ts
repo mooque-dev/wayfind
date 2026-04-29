@@ -33,6 +33,10 @@ export const locations: Location[] = [
       { name: "Natural History Museum", address: "Cromwell Rd, London SW7 5BD", category: "Museum" },
       { name: "Big Ben & Westminster", address: "Westminster Bridge Rd, London SW1A 0AA", category: "Sights" },
       { name: "Monmouth Coffee (Borough)", address: "2 Park St, London SE1 9AB", category: "Food" },
+      { name: "Apollo Victoria Theatre", address: "17 Wilton Rd, London SW1V 1LG", category: "Music" },
+      { name: "Fortnum & Mason", address: "181 Piccadilly, London W1A 1ER", category: "Shopping" },
+      { name: "The National Gallery", address: "Trafalgar Square, London WC2N 5DN", category: "Museum" },
+      { name: "Golders Hill Park", address: "Golders Hill Park, London NW11 7QP", category: "Sights" },
     ],
   },
   {
@@ -159,9 +163,12 @@ export const itinerary: ItineraryDay[] = [
     city: "London",
     country: "UK",
     events: [
-      { id: "e_rd2", time: "08:30", title: "Morning reading & coffee", location: "Aunt's House", type: "Free" },
-      { id: "e11", time: "11:00", title: "Pack & prep for travel", location: "Aunt's House", type: "Free" },
-      { id: "e12", time: "Evening", title: "Farewell dinner", location: "London", type: "Food" },
+      { id: "e_apr29_1", time: "10:00", title: "Morning run", location: "Golders Hill Park, NW11", type: "Activity", address: "Golders Hill Park, London NW11 7QP" },
+      { id: "e_apr29_2", time: "11:00", title: "Home", location: "Aunt's House, NW11", type: "Free" },
+      { id: "e_apr29_3", time: "12:00", title: "Abbey Road", location: "St John's Wood, NW8", type: "Sights", address: "3 Abbey Rd, London NW8 9AY" },
+      { id: "e_apr29_4", time: "12:30", title: "Soho & West End wander", location: "Soho / St James's, W1", type: "Sights", notes: "Outernet · Ronnie Scott's · Fortnum & Mason · National Gallery area" },
+      { id: "e_apr29_5", time: "14:30", title: "Wicked", location: "Apollo Victoria Theatre, SW1", type: "Music", address: "17 Wilton Rd, London SW1V 1LG", notes: "Done ~17:30" },
+      { id: "e_apr29_6", time: "17:30", title: "Dinner — Soho", location: "Soho, W1", type: "Food", notes: "Wind down post-show" },
     ],
   },
   {
