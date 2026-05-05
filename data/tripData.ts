@@ -261,8 +261,8 @@ export const itinerary: ItineraryDay[] = [
     country: "Denmark",
     events: [
       { id: "e_am1", time: "07:30", title: "Morning coffee & pack", location: "Coco Hotel, Vesterbro", type: "Free" },
-      { id: "e_am2", time: "13:00", title: "Flight to Amsterdam (D83540)", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup", notes: "Norwegian Air · Order #1122-757-553 · ~2h flight · Hohyung joining", docUrl: "/docs/Receipt_1122-757-553.pdf", docLabel: "Receipt" },
-      { id: "e_am3", time: "15:10", title: "Arrive Amsterdam Schiphol", location: "Amsterdam Airport Schiphol", type: "Transit", address: "Evert van de Beekstraat 202, 1118 CP Schiphol" },
+      { id: "e_am2", time: "16:20", title: "Flight to Amsterdam (D83540)", location: "Copenhagen Airport (CPH)", type: "Transit", address: "Lufthavnsboulevarden 6, 2770 Kastrup", notes: "Norwegian Air · Order #1122-757-553 · ~1h35m flight · Hohyung joining", docUrl: "/docs/Receipt_1122-757-553.pdf", docLabel: "Receipt" },
+      { id: "e_am3", time: "17:55", title: "Arrive Amsterdam Schiphol", location: "Amsterdam Airport Schiphol", type: "Transit", address: "Evert van de Beekstraat 202, 1118 CP Schiphol" },
       { id: "e_am4", time: "16:30", title: "Check in — The Hoxton Amsterdam", location: "Herengracht 255, Amsterdam", type: "Check-in", address: "Herengracht 255, 1016 BJ Amsterdam" },
       { id: "e_am5", time: "18:00", title: "Walk along the canals", location: "Jordaan & Herengracht", type: "Sights" },
       { id: "e_am6", time: "21:00", title: "Bimhuis — jazz evening", location: "Piet Heinkade 3, Amsterdam", type: "Music", address: "Piet Heinkade 3, 1019 BR Amsterdam", bookingUrl: "https://bimhuis.nl", bookingLabel: "Buy Tickets" },
